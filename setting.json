@@ -1,0 +1,114 @@
+{
+  // ESLint 相关配置
+  "eslint.enable": true, // 启用 ESLint
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ], // 指定 ESLint 验证的文件类型
+  "eslint.format.enable": true, // 启用 ESLint 格式化
+  "eslint.alwaysShowStatus": true, // 总是显示 ESLint 状态
+
+  // 搜索相关配置
+  "search.exclude": {
+    "**/.git": true, // 排除 .git 文件夹
+    "**/node_modules": true, // 排除 node_modules 文件夹
+    "**/yarn.lock": true, // 排除 yarn.lock 文件
+    "**/__snapshots__": true // 排除 __snapshots__ 文件夹
+  },
+
+  // TypeScript 相关配置
+  "typescript.tsdk": "node_modules/typescript/lib", // TypeScript SDK 路径
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false, // 在函数参数列表的括号前不插入空格
+  "typescript.updateImportsOnFileMove.enabled": "always", // 移动文件时更新 TypeScript 的导入
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // TypeScript 文件的默认格式化程序
+  "[typescriptreact]": {
+    "editor.defaultFormatter":"esbenp.prettier-vscode"
+    // "editor.defaultFormatter": "vscode.typescript-language-features"
+  }, // TypeScriptReact 文件的默认格式化程序
+
+  // JavaScript 相关配置
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false, // 在函数参数列表的括号前不插入空格
+  "javascript.updateImportsOnFileMove.enabled": "always", // 移动文件时更新 JavaScript 的导入
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }, // JavaScript 文件的默认格式化程序
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // JavaScriptReact 文件的默认格式化程序
+
+  // CSS 相关配置
+  "[css]": { "editor.defaultFormatter": "vscode.css-language-features" }, // CSS 文件的默认格式化程序
+  "[scss]": { "editor.defaultFormatter": "vscode.css-language-features" }, // SCSS 文件的默认格式化程序
+
+  // HTML 相关配置
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // HTML 文件的默认格式化程序
+
+  // 文件关联配置
+  "files.associations": {
+    "*.embeddedhtml": "html", // 关联 .embeddedhtml 文件到 HTML
+    "*.json": "jsonc", // 关联 .json 文件到 JSON with Comments
+    "*.cjson": "jsonc", // 关联 .cjson 文件到 JSON with Comments
+    "*.wxss": "css", // 关联 .wxss 文件到 CSS
+    "*.wxs": "javascript" // 关联 .wxs 文件到 JavaScript
+  },
+
+  // Todo 相关配置
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]",
+    "COMMENT",
+    "##TODO",
+    "TODO: tsconfig"
+  ], // 定义 Todo 标签列表
+
+  // 编辑器行为配置
+  "editor.mouseWheelZoom": true, // 启用鼠标滚轮放大
+  "files.autoSave": "onFocusChange", // 自动保存文件
+  "editor.formatOnPaste": true, // 粘贴时格式化代码
+  "editor.formatOnSave": true, // 保存时格式化代码
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true //删除未使用的导入和声明
+  }, // 保存时执行代码动作
+  "editor.tabSize": 2, // 制表符大小
+  "editor.insertSpaces": false, // 插入空格而不是制表符
+  "editor.inlineSuggest.enabled": true, // 启用行内建议
+  "editor.accessibilitySupport": "off", // 关闭辅助功能支持
+
+  // 终端相关配置
+  "terminal.integrated.defaultProfile.windows": "Git Bash", // Windows 上默认的终端配置
+
+  // Git 相关配置
+  "git.enableSmartCommit": true, // 启用智能提交
+  "git.ignoreRebaseWarning": true, // 忽略 Git 变基警告
+  "git.openRepositoryInParentFolders": "never", // 在父文件夹中不打开存储库
+
+  // Emmet 相关配置
+  "emmet.excludeLanguages": ["markdown", "php"], // 排除的语言列表
+  "emmet.includeLanguages": { "wxml": "html" }, // 包含语言列表中的语言
+
+  // PHP 相关配置
+  "php.suggest.basic": false, // 禁用 PHP 基本建议
+  "php.validate.enable": false, // 禁用 PHP 验证
+
+  // 其他配置
+  "explorer.compactFolders": false, // 在资源管理器中展开所有文件夹
+  "code-runner.runInTerminal": true, // 在终端中运行代码
+  "security.workspace.trust.untrustedFiles": "open", // 对不受信任的文件进行限制
+  "explorer.confirmDragAndDrop": false, // 禁用资源管理器中的拖放确认
+  "explorer.confirmDelete": false, // 禁用资源管理器中的删除确认
+  "diffEditor.hideUnchangedRegions.enabled": true, // 隐藏未更改的区域
+  "diffEditor.ignoreTrimWhitespace": false, // 忽略修剪的空白
+  "accessibility.signals.sounds.volume": 0, // 声音音量
+  "todo-tree.highlights.useColourScheme": true, // 使用色彩方案高亮显示 TODO 标记
+  "files.saveConflictResolution": "overwriteFileOnDisk", // 保存冲突解决方案
+  "prettier.endOfLine": "auto", // 行尾格式
+  "kotlin.languageServer.enabled": false, // 禁用 Kotlin 语言服务器
+  "kotlin.debugAdapter.enabled": false, // 禁用 Kotlin 调试适配器
+  "[prisma]": { "editor.defaultFormatter": "Prisma.prisma" }, // Prisma 文件的默认格式化程序
+  "[plantuml]": { "editor.defaultFormatter": "jebbs.plantuml" } // PlantUML 文件的默认格式化程序
+}
