@@ -14,7 +14,7 @@ module.exports = {
   overrides: [
     {
       test: [
-        "./src/RmAdManager/index.ts"
+        "./src/index.ts"
       ],
       plugins: ["babel-plugin-transform-remove-console"]
     }
